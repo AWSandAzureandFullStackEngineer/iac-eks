@@ -3,9 +3,14 @@ name: Cloudcore IAC
 on:
   push:
     branches:
-      - main
+      - master
     paths:
-      - 'terraform/**'
+      - terraform/**
+  pull_request:
+    branches:
+      - master
+    paths:
+      - terraform/**
   workflow_dispatch:
     inputs:
       action:
