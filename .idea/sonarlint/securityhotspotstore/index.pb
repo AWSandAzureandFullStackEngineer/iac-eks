@@ -1,0 +1,21 @@
+
+@
+terraform/vpc.tf,5/5/55919a3850caccc3a53df75b695f0867fa5a67cc
+F
+terraform/variables.tf,0/1/01d84c99873568e2425a17dfd3c2507334c283f1
+F
+terraform/terraform.tf,7/0/708b3a1f91d5b08acf60fbb5b356ffac9c09867e
+D
+terraform/outputs.tf,3/9/390e3eb2d7cbe7af791c72285480a31b941ed751
+E
+terraform/jumphost.tf,2/3/23d3ca014b0080740a9e06ef27fcd00d5f095c39
+E
+terraform/iam-role.tf,9/0/903524cf7ce86f6e809a861a7b9f134ae29b0826
+G
+terraform/iam-policy.tf,7/1/7158744163661d63ac53092e1ec583c3bfc4d915
+Q
+!terraform/iam-instance-profile.tf,2/3/232cd678962daaf0e4d1f78f98633d37c136ff68
+O
+.github/workflows/terraform.yml,c/f/cfae89b421096de27b89aac06e4d040b446e8086
+J
+terraform/install-tools.py,2/9/296f9aa3d4f63801aaf619146a4e07fda70fcc5b
