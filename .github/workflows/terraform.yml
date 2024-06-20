@@ -74,3 +74,4 @@ jobs:
         id: destroy
         if: ${{ github.event.inputs.action }} == 'destroy' && github.event_name == 'workflow_dispatch'
         run: terraform destroy -auto-approve
+
