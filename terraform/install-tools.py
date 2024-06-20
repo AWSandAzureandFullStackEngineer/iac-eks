@@ -114,11 +114,11 @@ def main():
         log.write("Creating EKS cluster...\n")
         eksctl_command = """
         eksctl create cluster \
-          --name my-cluster \
-          --version 1.28 \
-          --region us-west-2 \
+          --name engineers-cluster \
+          --version 1.30 \
+          --region us-east-1 \
           --nodegroup-name linux-nodes \
-          --node-type t3.medium \
+          --node-type t3.small \
           --nodes 2 \
           --nodes-min 1 \
           --nodes-max 3 \
