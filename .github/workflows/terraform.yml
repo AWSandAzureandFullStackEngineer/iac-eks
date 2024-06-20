@@ -2,10 +2,14 @@ name: Cloudcore IAC
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - terraform/**
+  pull_request:
+    branches: [main]
+    paths:
+      - terraform/**
+
   workflow_dispatch:
     inputs:
       action:
