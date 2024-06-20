@@ -3,22 +3,7 @@ name: Cloudcore IAC
 on:
   push:
     branches: [main]
-    paths:
-      - terraform/**
-  pull_request:
-    branches: [main]
-    paths:
-      - terraform/**
 
-  workflow_dispatch:
-    inputs:
-      action:
-        description: 'Action to perform (apply/destroy)'
-        required: true
-        default: 'destroy'
-        options:
-          - 'apply'
-          - 'destroy'
 
 env:
   # credentials for deployment to AWS
@@ -26,6 +11,7 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   # S3 bucket for the terraform state.
   BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
+  TERRAFORM_ACTION: destroy
   AWS_REGION: us-east-1
 
 jobs:
@@ -65,13 +51,8 @@ jobs:
         if: steps.plan.outcome == 'failure'
         run: exit 1
 
-      - name: Terraform Apply or Destroy
-        id: apply-or-destroy
-        if: ${{ github.event.inputs.action }} != 'apply' && github.event_name == 'workflow_dispatch'
-        run: terraform apply -auto-approve -input=false -parallelism=1 planfile
+      - name: Run Terraform apply/destroy
+        working-directory: ./terraform
+        run: terraform ${{ env.TERRAFORM_ACTION }} -auto-approve
 
-      - name: Terraform Destroy
-        id: destroy
-        if: ${{ github.event.inputs.action }} == 'destroy' && github.event_name == 'workflow_dispatch'
-        run: terraform destroy -auto-approve
 
