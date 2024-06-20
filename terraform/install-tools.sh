@@ -39,7 +39,7 @@ sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
 
 # Create EKS Fargate cluster
-eksctl create cluster --name=engineer-cluster --version=1.30 --region=us-east-1 --fargate --nodes=1 --nodes-min=1 --nodes-max=3 --auto-kubeconfig --alb-ingress-access --full-ecr-access
+eksctl create cluster --name=engineering-cluster --version=1.30 --region=us-east-1 --fargate --nodes=1 --nodes-min=1 --nodes-max=3 --auto-kubeconfig --alb-ingress-access --full-ecr-access
 # Wait for cluster to be ready
 kubectl wait --for=condition=Ready node --all --timeout=900s
 
