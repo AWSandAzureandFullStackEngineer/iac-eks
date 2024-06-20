@@ -8,7 +8,7 @@ resource "aws_instance" "ec2" {
   root_block_device {
     volume_size = 30
   }
-  user_data = templatefile("install-tools.sh", {})
+  user_data = templatefile("install-tools.py", {})
 
   tags = {
     Name = var.instance_name
