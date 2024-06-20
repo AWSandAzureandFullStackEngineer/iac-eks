@@ -11,7 +11,7 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   # S3 bucket for the terraform state.
   BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
-  TERRAFORM_ACTION: apply
+  TERRAFORM_ACTION: delete
   AWS_REGION: us-east-1
 
 jobs:
