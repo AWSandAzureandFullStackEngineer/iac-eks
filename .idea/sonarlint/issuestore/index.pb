@@ -19,3 +19,5 @@ O
 .github/workflows/terraform.yml,c/f/cfae89b421096de27b89aac06e4d040b446e8086
 J
 terraform/install-tools.py,2/9/296f9aa3d4f63801aaf619146a4e07fda70fcc5b
+J
+terraform/install-tools.sh,d/d/ddcea87779ea0c30cdcb60903dccca9a45a5c2a3
