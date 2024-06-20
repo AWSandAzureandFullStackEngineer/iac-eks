@@ -11,7 +11,7 @@ on:
       action:
         description: 'Action to perform (apply/destroy)'
         required: true
-        default: 'destroy'
+        default: 'apply'
         options:
           - 'apply'
           - 'destroy'
